@@ -1,0 +1,212 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background-color: #0079bf;
+}
+.ui-state-highlight{
+	width:250px;
+	height:270px;
+}
+.navbar{
+	height: 50px;
+}
+.navbar-brand{
+	color: #fff;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+#container{
+	white-space: nowrap;
+	padding-left: 10px;
+	vertical-align: top;
+}
+
+.tour-wrap{
+	width: 270px;
+	height: calc(100vh - 80px);
+	display: inline-block;
+	margin-right: 10px;
+	position: relative;
+	float: left;
+}
+	.tour-wrap > div{
+		width: 100%;
+		height: auto;
+		overflow-y: auto;
+		border-radius: 5px;
+		padding: 10px;
+		background-color: #e2e4e6;
+		margin-bottom:10px;
+
+		/*position: absolute;
+		top: 0;
+		left: 0;*/
+	}
+	.btn-tour-add{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+.w100{
+	width: 100%;
+	overflow: hidden;
+}
+.title{
+	line-height:35px;
+	max-width: calc(100% - 35px);
+	display: inline-block;
+	font-size:16px;
+	font-weight: bold;
+	color: #333;
+	overflow: hidden;
+}
+.tour-title{
+	font-size: 20px;
+}
+.btn-delete{
+	float: right;
+}
+.btn-tour-photoview{
+	background-color: #ccc;
+	border-color: #ccc;
+}
+.btn-card-add{
+	margin-top: 10px;
+}
+
+.card{
+	width: 100%;
+	padding: 10px;
+	line-height: 20px;
+	border-radius: 5px;
+	overflow: hidden;
+	background-color: #fff;
+	margin-top: 10px;
+}
+	.card p:first-of-type{
+		font-weight: bold;
+	}
+	.card p{
+		width: 100%;
+		white-space: normal;
+	}
+	.card img{
+		margin-bottom: 10px;
+	}
+
+.last-form{
+	margin-bottom: 0;
+}
+
+#image_area{
+	width:500px;
+	height: 300px;
+	line-height: 300px;
+	background-color:#ddd;
+	font-size:30px;
+	font-weight: bold;
+	color:#aaa;
+	text-align: center;
+	border:2px dashed #ccc;
+}
+
+.half{
+	width:50%;
+	float:left;
+	white-space: nowrap;
+}
+	.half p{
+		margin-bottom:20px;
+	}
+.half2{
+	padding-left:60px;
+}
+
+
+input[type="button"].active{
+	background-color: #0079bf;
+	color:white;
+}
+
+#photoViewBg{
+	width:100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.8);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+	#photoViewImage{
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	#close_btn{
+		width: 100px;
+		height: 100px;
+
+		font-size:30px;
+		font-weight: bold;
+
+		position: fixed;
+		top: 50px;
+		right: 100px;
+	}
+	#prev_btn{
+		border:none;
+		background-color: transparent;
+		font-family: "Malgun Gothic";
+		font-size:200px;
+		font-weight: bold;
+		color: white;
+
+		position: fixed;
+		top: 50%;
+		left:50px;
+		transform:translateY(-55%);
+	}
+	#next_btn{
+		border:none;
+		background-color: transparent;
+		font-family: "Malgun Gothic";
+		font-size:200px;
+		font-weight: bold;
+		color: white;
+
+		position: fixed;
+		top: 50%;
+		right:50px;
+		transform:translateY(-55%);
+	}
+	#photoViewPos{
+		list-style-type: none;
+		position: fixed;
+		bottom:50px;
+		left:50%;
+		transform:translateX(-50%);
+	}
+		#photoViewPos li{
+			width:30px;
+			height:30px;
+			float:left;
+			margin: 0 10px;
+			border-radius: 100%;
+			border:3px solid #fff;
+			cursor: pointer;
+		}
+		#photoViewPos li.active{
+			background-color:white;
+		}
+	#photoViewSel{
+		padding:20px 30px;
+		border-radius: 10px;
+		position: fixed;
+		top: 50px;
+		left: 50%;
+		transform: translateX(-50%);
+	}

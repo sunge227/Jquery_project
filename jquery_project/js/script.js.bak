@@ -1,0 +1,98 @@
+$(function(){
+	
+	$(".tour-wrap").eq(-2).hide();
+
+	$(document).on("click",".btn-tour-add",function(){
+		$(".tour-wrap").eq(-1).hide();
+		$(".tour-wrap").eq(-2).show();
+	});
+
+	$(document).on("click",".last-form input",function(){
+		if($(this).val() ==  "취소"){
+
+		}else{
+
+		}
+	});
+
+});
+
+
+function openPopupAddCard(){
+	var div = "<div title='카드 추가'>";
+
+        div += "<div class='form-group'>";
+            div += "<input type='text' class='form-control' placeholder='카드 제목'>";
+        div += "</div>";
+
+        div += "<div class='form-group'>";
+            div += "<textarea class='form-control' placeholder='설명' rows='3'></textarea>";
+        div += "</div>";
+
+        div += "<div class='form-group'>";
+            div += "<div id='image_area'>사진 영역</div>";
+        div += "</div>";
+
+		div += "<div class='form-group'>";
+			div += "<input type='button' value='브러시' class='btn active'> &nbsp;&nbsp;&nbsp;";
+			div += "<select id='sel_shape'>";
+				div += "<option>RED</option>";
+				div += "<option>GREEN</option>";
+				div += "<option>BLUE</option>";
+				div += "<option>YELLOW</option>";
+				div += "<option>PINK</option>";
+				div += "<option>SKY BLUE</option>";
+			div += "</select> &nbsp;&nbsp;&nbsp;";
+			div += "<input type='text' size='3' value='1' readonly='readonly'> ";
+			div += "<input type='button' value='+' class='btn'> ";
+			div += "<input type='button' value='-' class='btn'> (px)";
+		div += "</div>";
+
+	div += "</div>";
+
+    $(div).dialog({
+      resizable: false,
+      modal: true,
+      width: 540,
+      buttons: {
+        "완료": function() {
+          $( this ).dialog( "close" );
+        },
+        "취소": function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+}
+
+function viewPhotoSlide(){
+	var div = "<div id='photoViewBg'>";
+
+		div += "<div id='photoViewImage'>";
+			div += "<img src='images/1.jpg' alt='카드명' title='카드명'>";
+		div += "</div>";
+
+		div += "<select id='photoViewSel'>";
+			div += "<option>Bounce</option>";
+			div += "<option>Fade</option>";
+			div += "<option>Flip</option>";
+		div += "</select>";
+
+		div += "<input type='button' value='X' class='btn btn-primary' id='close_btn'>";
+		div += "<input type='button' value='<' class='' id='prev_btn'>";
+		div += "<input type='button' value='>' class='' id='next_btn'>";
+
+		div += "<ul id='photoViewPos'>";
+			div += "<li class='active'></li>";
+			div += "<li></li>";
+			div += "<li></li>";
+		div += "</ul>";
+
+	div += "</div>";
+
+	$("body").prepend($(div));
+
+	$("#close_btn").on("click", function (){
+		$("#photoViewBg").remove();
+	});
+}
